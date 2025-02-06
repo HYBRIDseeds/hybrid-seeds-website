@@ -3,34 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hybrid Seeds | Cross-Pollinated Varieties</title>
   
-  <!-- SEO Meta -->
-  <title>Hybrid Seeds | Cross-Pollinated Varieties for Stronger Plants</title>
-  <meta name="description" content="Break the inbreeding cycle with our experimental hybrid seeds. Cross-pollinated varieties for disease resistance and genetic diversity. 4 unique chili pepper crosses available.">
-  <link rel="canonical" href="https://hybridseeds.com/">
-  
-  <!-- Social Meta -->
-  <meta property="og:title" content="Hybrid Seeds | Naturally Cross-Pollinated Varieties">
-  <meta property="og:description" content="Create resilient new plant varieties through hybridization. 100% natural cross-pollination process.">
-  <meta property="og:image" content="https://hybridseeds.com/images/social-preview.jpg">
-
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Hybrid Seeds",
-    "url": "https://hybridseeds.com/",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "{search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  }
-  </script>
-
   <style>
-    /* ===== Mobile-First Styles ===== */
+    /* ===== Base Styles ===== */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -40,15 +16,36 @@
     body {
       font-family: Arial, sans-serif;
       line-height: 1.6;
+      padding-top: 70px; /* Offset for sticky header */
     }
 
+    /* ===== Sticky Header ===== */
     header {
       background: #4CAF50;
       color: white;
       padding: 1rem;
-      position: relative;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
+    /* ===== Color Placeholders ===== */
+    .image-placeholder {
+      height: 200px;
+      width: 100%;
+      background: #ddd;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+    }
+
+    .product-card:nth-child(1) .image-placeholder { background: #FFBE0B; }
+    .product-card:nth-child(2) .image-placeholder { background: #FB5607; }
+    .product-card:nth-child(3) .image-placeholder { background: #FF006E; }
+    .product-card:nth-child(4) .image-placeholder { background: #8338EC; }
+
+    /* ===== Rest of Your Styles ===== */
     h1 {
       text-align: center;
       font-size: 1.8rem;
@@ -89,6 +86,7 @@
       padding: 2rem 1rem;
       text-align: center;
       background: #f8f9fa;
+      margin-bottom: 2rem;
     }
 
     .products {
@@ -109,18 +107,6 @@
       transition: transform 0.2s;
     }
 
-    .product-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .product-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 4px;
-      margin-bottom: 1rem;
-    }
-
     button {
       background: #4CAF50;
       color: white;
@@ -137,20 +123,14 @@
       text-align: center;
     }
 
-    #checkout-button {
-      background: #388E3C;
-      padding: 1rem 2rem;
-      font-size: 1.1rem;
-    }
-
     footer {
       background: #333;
       color: white;
       padding: 2rem 1rem;
       text-align: center;
+      margin-top: 2rem;
     }
 
-    /* ===== Desktop Styles ===== */
     @media (min-width: 768px) {
       .mobile-menu-icon,
       .mobile-menu {
@@ -181,93 +161,62 @@
       }
     }
   </style>
-  
-  <script src="https://js.stripe.com/v3/"></script>
 </head>
 <body>
-  <!-- Header -->
-  <header itemscope itemtype="https://schema.org/WPHeader">
+  <!-- Sticky Header -->
+  <header>
     <h1>Hybrid Seeds 🌱</h1>
     <div class="mobile-menu-icon">☰</div>
-    <nav class="desktop-nav" itemscope itemtype="https://schema.org/SiteNavigationElement">
-      <a href="#home" itemprop="url"><span itemprop="name">Home</span></a>
-      <a href="#shop" itemprop="url"><span itemprop="name">Shop</span></a>
-      <a href="#science" itemprop="url"><span itemprop="name">The Science</span></a>
-      <a href="#contact" itemprop="url"><span itemprop="name">Contact</span></a>
+    <nav class="desktop-nav">
+      <a href="#home">Home</a>
+      <a href="#shop">Shop</a>
+      <a href="#science">Science</a>
+      <a href="#contact">Contact</a>
     </nav>
     <div class="mobile-menu">
       <a href="#home">Home</a>
       <a href="#shop">Shop</a>
-      <a href="#science">The Science</a>
+      <a href="#science">Science</a>
       <a href="#contact">Contact</a>
     </div>
   </header>
 
-  <!-- Updated Hero Section -->
-  <section class="hero" itemscope itemtype="https://schema.org/ItemList">
+  <!-- Hero Section -->
+  <section class="hero">
     <h2>Break the Genetic Bottleneck</h2>
-    <p itemprop="description">
+    <p>
       Commercial seeds suffer from generational inbreeding. Our cross-pollinated hybrids introduce 
-      genetic diversity for stronger plants and unexpected new varieties. Each packet contains 
-      10+ seeds with detailed hybridization documentation.
+      genetic diversity for stronger plants and unexpected new varieties.
     </p>
   </section>
 
-  <!-- Product Grid -->
+  <!-- Product Grid with Color Placeholders -->
   <section id="shop" class="products">
-    <!-- Big Jim x Chiltepin -->
-    <div class="product-card" itemscope itemtype="https://schema.org/Product">
-      <img src="bigjim-chiltepin-seed.jpg" 
-           alt="Hybrid chili seeds: Big Jim x Wild Chiltepin cross" 
-           itemprop="image">
-      <h3 itemprop="name">Big Jim x Chiltepin</h3>
-      <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-        <meta itemprop="priceCurrency" content="USD">
-        <meta itemprop="price" content="6.99">
-        <p>10+ seeds | <span itemprop="price">$6.99</span></p>
-      </div>
+    <div class="product-card">
+      <div class="image-placeholder"></div>
+      <h3>Big Jim x Chiltepin</h3>
+      <p>10+ seeds | $6.99</p>
       <button class="add-to-cart">Add to Cart</button>
     </div>
 
-    <!-- Chiltepin x Bell Pepper -->
-    <div class="product-card" itemscope itemtype="https://schema.org/Product">
-      <img src="chiltepin-bellpepper-seed.jpg" 
-           alt="Hybrid pepper seeds: Chiltepin x Bell Pepper cross" 
-           itemprop="image">
-      <h3 itemprop="name">Chiltepin x Bell Pepper</h3>
-      <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-        <meta itemprop="priceCurrency" content="USD">
-        <meta itemprop="price" content="6.99">
-        <p>10+ seeds | $6.99</p>
-      </div>
+    <div class="product-card">
+      <div class="image-placeholder"></div>
+      <h3>Chiltepin x Bell Pepper</h3>
+      <p>10+ seeds | $6.99</p>
       <button class="add-to-cart">Add to Cart</button>
     </div>
 
-    <!-- Jalapeno x Big Jim -->
-    <div class="product-card" itemscope itemtype="https://schema.org/Product">
-      <img src="jalapeno-bigjim-seed.jpg" 
-           alt="Hybrid chili seeds: Jalapeno x Big Jim cross" 
-           itemprop="image">
-      <h3 itemprop="name">Jalapeno x Big Jim</h3>
-      <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-        <meta itemprop="priceCurrency" content="USD">
-        <meta itemprop="price" content="6.99">
-        <p>10+ seeds | $6.99</p>
-      </div>
+    <div class="product-card">
+      <div class="image-placeholder"></div>
+      <h3>Jalapeno x Big Jim</h3>
+      <p>10+ seeds | $6.99</p>
       <button class="add-to-cart">Add to Cart</button>
     </div>
 
-    <!-- Ghostly Jalapeno x Yellow Bell -->
-    <div class="product-card" itemscope itemtype="https://schema.org/Product">
-      <img src="ghostly-jalapeno-yellowbell-seed.jpg" 
-           alt="Hybrid pepper seeds: Ghost Pepper x Yellow Bell cross" 
-           itemprop="image">
-      <h3 itemprop="name">Ghostly Jalapeno x Yellow Bell</h3>
-      <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-        <meta itemprop="priceCurrency" content="USD">
-        <meta itemprop="price" content="6.99">
-        <p>10+ seeds | $6.99</p>
-      </div>
+    <div class="product-card">
+      <div class="image-placeholder"></div>
+      <h3>Ghostly Jalapeno x Yellow Bell</h3>
+      <p>10+ seeds | $6.99</p>
       <button class="add-to-cart">Add to Cart</button>
     </div>
   </section>
@@ -277,21 +226,10 @@
     <button id="checkout-button">Proceed to Checkout</button>
   </div>
 
-  <!-- Science Section -->
-  <section class="science" itemscope itemtype="https://schema.org/FAQPage">
-    <h2>Why Hybrids Matter</h2>
-    <div class="science-point" itemscope itemtype="https://schema.org/Question">
-      <h3 itemprop="name">Genetic Diversity = Plant Health</h3>
-      <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Cross-pollination introduces new genetic combinations that help plants resist diseases and adapt to changing environments.</p>
-      </div>
-    </div>
-  </section>
-
   <!-- Footer -->
   <footer>
     <p>Contact: support@hybridseeds.com</p>
-    <p>© 2024 Hybrid Seeds. All rights reserved.</p>
+    <p>© 2025 Hybrid Seeds. All rights reserved.</p>
   </footer>
 
   <script>
@@ -302,40 +240,24 @@
       mobileMenu.classList.toggle('active');
     });
 
-    // Cart Functionality
-    const stripe = Stripe('pk_test_your_key_here'); 
+    // Simple Cart Functionality
     let cartItems = [];
-
+    
     document.querySelectorAll('.add-to-cart').forEach(button => {
       button.addEventListener('click', (e) => {
         const product = e.target.closest('.product-card');
         const productName = product.querySelector('h3').textContent;
-        cartItems.push({
-          name: productName,
-          price: 6.99,
-          sku: product.querySelector('img').src.split('/').pop().split('.')[0]
-        });
+        cartItems.push(productName);
         alert(`Added ${productName} to cart!`);
       });
     });
 
-    // Checkout Handler
-    document.getElementById('checkout-button').addEventListener('click', async () => {
-      if (cartItems.length === 0) return alert('Your cart is empty!');
-      
-      try {
-        const response = await fetch('/create-checkout-session', {
-          method: 'POST',
-          headers: {'Content-Type': 'application/json'},
-          body: JSON.stringify({items: cartItems})
-        });
-        
-        const session = await response.json();
-        const result = await stripe.redirectToCheckout({sessionId: session.id});
-        if (result.error) alert(result.error.message);
-      } catch (error) {
-        console.error('Checkout error:', error);
-        alert('Payment processing failed. Please try again.');
+    // Checkout Placeholder
+    document.getElementById('checkout-button').addEventListener('click', () => {
+      if (cartItems.length === 0) {
+        alert('Your cart is empty!');
+      } else {
+        alert('Checkout functionality coming soon!\nItems in cart: ' + cartItems.join(', '));
       }
     });
   </script>
