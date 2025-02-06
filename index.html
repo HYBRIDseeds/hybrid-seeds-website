@@ -4,6 +4,95 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hybrid Seeds | Crossbred for Strength</title>
+  
+  <!-- Inline CSS for sticky header and smooth scrolling -->
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* Sticky header styling */
+    header {
+      position: sticky;
+      top: 0;
+      background-color: #fff;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 10px 20px;
+    }
+    
+    /* Basic styles for navigation links */
+    nav a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: #333;
+    }
+    
+    /* Style for the mobile menu icon */
+    .mobile-menu-icon {
+      cursor: pointer;
+      display: none; /* Adjust as needed based on responsive design */
+    }
+    
+    /* Example: show mobile menu icon for smaller screens */
+    @media (max-width: 768px) {
+      .mobile-menu-icon {
+        display: inline-block;
+      }
+      .desktop-nav {
+        display: none;
+      }
+    }
+    
+    /* Additional basic styling (feel free to modify or move to style.css) */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    
+    .hero {
+      padding: 50px 20px;
+      text-align: center;
+      background: #f0f0f0;
+    }
+    
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 20px;
+    }
+    
+    .product-card {
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 15px;
+      margin: 10px;
+      text-align: center;
+      width: 300px;
+    }
+    
+    .product-card img {
+      max-width: 100%;
+      height: auto;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 15px;
+    }
+    
+    .checkout-wrapper {
+      text-align: center;
+      margin: 30px 0;
+    }
+    
+    footer {
+      background: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+
+  <!-- External CSS if needed -->
   <link rel="stylesheet" href="style.css">
   <script src="https://js.stripe.com/v3/"></script>
 </head>
@@ -47,6 +136,18 @@
     <div class="product-card">
       <img src="chiltepin-bellpepper-seed.jpg" alt="Chiltepin x Bell Pepper Seed Packet">
       <h3>Chiltepin x Bell Pepper</h3>
+      <p>10+ seeds per packet | $6.99</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="jalapeno-bigjim-seed.jpg" alt="Jalapeno x Big Jim Seed Packet">
+      <h3>Jalapeno x Big Jim</h3>
+      <p>10+ seeds per packet | $6.99</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="ghostly-jalapeno-yellowbell-seed.jpg" alt="Ghostly Jalapeno x Yellow Bell Seed Packet">
+      <h3>Ghostly Jalapeno x Yellow Bell</h3>
       <p>10+ seeds per packet | $6.99</p>
       <button class="add-to-cart">Add to Cart</button>
     </div>
