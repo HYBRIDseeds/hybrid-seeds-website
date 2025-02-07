@@ -16,7 +16,7 @@
     body {
       font-family: Arial, sans-serif;
       line-height: 1.6;
-      padding-top: 70px; /* Offset for sticky header */
+      padding-top: 80px; /* Initial padding for mobile */
     }
 
     /* ===== Sticky Header ===== */
@@ -31,26 +31,13 @@
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
-    /* ===== Color Placeholders ===== */
-    .image-placeholder {
-      height: 200px;
-      width: 100%;
-      background: #ddd;
-      border-radius: 4px;
-      margin-bottom: 1rem;
-    }
-
-    .product-card:nth-child(1) .image-placeholder { background: #FFBE0B; }
-    .product-card:nth-child(2) .image-placeholder { background: #FB5607; }
-    .product-card:nth-child(3) .image-placeholder { background: #FF006E; }
-    .product-card:nth-child(4) .image-placeholder { background: #8338EC; }
-
-    /* ===== Rest of Your Styles ===== */
     h1 {
       text-align: center;
       font-size: 1.8rem;
+      margin: 0;
     }
 
+    /* ===== Mobile Menu ===== */
     .mobile-menu-icon {
       display: block;
       position: absolute;
@@ -69,6 +56,7 @@
       background: #388E3C;
       padding: 1rem;
       text-align: center;
+      margin-top: 1rem;
     }
 
     .mobile-menu.active {
@@ -82,6 +70,7 @@
       text-decoration: none;
     }
 
+    /* ===== Hero Section ===== */
     .hero {
       padding: 2rem 1rem;
       text-align: center;
@@ -89,6 +78,7 @@
       margin-bottom: 2rem;
     }
 
+    /* ===== Products Grid ===== */
     .products {
       display: grid;
       grid-template-columns: 1fr;
@@ -107,6 +97,19 @@
       transition: transform 0.2s;
     }
 
+    .image-placeholder {
+      height: 200px;
+      width: 100%;
+      background: #ddd;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+    }
+
+    .product-card:nth-child(1) .image-placeholder { background: #FFBE0B; }
+    .product-card:nth-child(2) .image-placeholder { background: #FB5607; }
+    .product-card:nth-child(3) .image-placeholder { background: #FF006E; }
+    .product-card:nth-child(4) .image-placeholder { background: #8338EC; }
+
     button {
       background: #4CAF50;
       color: white;
@@ -118,11 +121,13 @@
       width: 100%;
     }
 
+    /* ===== Checkout Section ===== */
     .checkout-wrapper {
       padding: 2rem 1rem;
       text-align: center;
     }
 
+    /* ===== Footer ===== */
     footer {
       background: #333;
       color: white;
@@ -131,7 +136,20 @@
       margin-top: 2rem;
     }
 
+    /* ===== Desktop Styles ===== */
     @media (min-width: 768px) {
+      body {
+        padding-top: 120px; /* Increased padding for desktop header */
+      }
+
+      header {
+        padding: 1.5rem 1rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
       .mobile-menu-icon,
       .mobile-menu {
         display: none;
@@ -190,7 +208,7 @@
     </p>
   </section>
 
-  <!-- Product Grid with Color Placeholders -->
+  <!-- Product Grid -->
   <section id="shop" class="products">
     <div class="product-card">
       <div class="image-placeholder"></div>
@@ -229,7 +247,7 @@
   <!-- Footer -->
   <footer>
     <p>Contact: support@hybridseeds.com</p>
-    <p>© 2025 Hybrid Seeds. All rights reserved.</p>
+    <p>© 2024 Hybrid Seeds. All rights reserved.</p>
   </footer>
 
   <script>
@@ -240,7 +258,7 @@
       mobileMenu.classList.toggle('active');
     });
 
-    // Simple Cart Functionality
+    // Cart Functionality
     let cartItems = [];
     
     document.querySelectorAll('.add-to-cart').forEach(button => {
