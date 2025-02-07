@@ -19,17 +19,31 @@
       padding-top: 70px; /* Offset for sticky header */
     }
 
-    /* ===== Sticky Header ===== */
-    header {
-      background: #4CAF50;
-      color: white;
-      padding: 1rem;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  /* ===== Sticky Header Fix ===== */
+  header {
+    height: 70px; /* Fixed header height */
+  }
+
+  body {
+    padding-top: 90px; /* Increased padding for desktop */
+  }
+
+  @media (min-width: 768px) {
+    body {
+      padding-top: 100px; /* More space for desktop header */
     }
+    
+    header {
+      padding: 1.5rem 1rem; /* Taller header on desktop */
+      height: auto; /* Allow natural height */
+    }
+    
+    h1 {
+      font-size: 2rem; /* Larger logo text */
+      margin-bottom: 0.5rem;
+    }
+  }
+
 
     /* ===== Color Placeholders ===== */
     .image-placeholder {
