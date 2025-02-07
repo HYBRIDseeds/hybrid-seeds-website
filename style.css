@@ -142,3 +142,38 @@ footer {
         height: 250px;
     }
 }
+
+    /* ===== Sticky Header ===== */
+    header {
+      background: #4CAF50;
+      color: white;
+      padding: 1rem;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      height: 70px; /* Fixed mobile height */
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      padding-top: 90px; /* Mobile padding */
+    }
+
+    @media (min-width: 768px) {
+      body {
+        padding-top: 120px; /* Desktop padding */
+      }
+
+      header {
+        height: auto; /* Natural height */
+        padding: 1.5rem 1rem; /* Taller header */
+      }
+
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
+    }
