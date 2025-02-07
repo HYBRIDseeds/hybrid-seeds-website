@@ -1,147 +1,16 @@
-/* Mobile-First Styles */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-header {
-    background: #4CAF50;
-    color: white;
-    padding: 1rem;
-    position: relative;
-    text-align: center;
-}
-
-.mobile-menu-icon {
-    display: block;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    cursor: pointer;
-    font-size: 24px;
-}
-
-.desktop-nav {
-    display: none;
-}
-
-.mobile-menu {
-    display: none;
-    background: #4CAF50;
-    padding: 1rem;
-    text-align: center;
-}
-
-.mobile-menu.active {
-    display: block;
-}
-
-.mobile-menu a {
-    display: block;
-    color: white;
-    margin: 1rem 0;
-    text-decoration: none;
-}
-
-.hero {
-    background: url('farm-background.jpg') no-repeat center/cover;
-    color: white;
-    text-align: center;
-    padding: 4rem 1rem;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-}
-
-.products {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    padding: 2rem;
-}
-
-.product-card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 1rem;
-    text-align: center;
-    background: white;
-}
-
-.product-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 4px;
-}
-
-button.add-to-cart {
-    background: #4CAF50;
-    color: white;
-    border: none;
-    padding: 1rem 2rem;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%;
-    font-size: 1rem;
-    margin-top: 1rem;
-}
-
-.checkout-wrapper {
-    padding: 2rem;
-    text-align: center;
-}
-
-#checkout-button {
-    background: #4CAF50;
-    color: white;
-    border: none;
-    padding: 1rem 2rem;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1.1rem;
-}
-
-footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 2rem 1rem;
-    margin-top: 2rem;
-}
-
-/* Tablet/Desktop Styles */
-@media (min-width: 768px) {
-    .mobile-menu-icon,
-    .mobile-menu {
-        display: none;
+<style>
+    /* ===== Base Styles ===== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    .desktop-nav {
-        display: block;
-        margin-top: 1rem;
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      padding-top: 80px; /* Mobile header spacing */
     }
-
-    .desktop-nav a {
-        color: white;
-        margin: 0 1.5rem;
-        text-decoration: none;
-        font-size: 1.1rem;
-    }
-
-    .products {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .product-card img {
-        height: 250px;
-    }
-}
 
     /* ===== Sticky Header ===== */
     header {
@@ -153,27 +22,173 @@ footer {
       width: 100%;
       z-index: 1000;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      height: 70px; /* Fixed mobile height */
     }
 
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      padding-top: 90px; /* Mobile padding */
+    h1 {
+      text-align: center;
+      font-size: 1.8rem;
+      margin: 0;
     }
 
+    /* ===== Mobile Menu ===== */
+    .mobile-menu-icon {
+      display: block;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
+
+    .desktop-nav {
+      display: none;
+    }
+
+    .mobile-menu {
+      display: none;
+      background: #388E3C;
+      padding: 1rem;
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .mobile-menu.active {
+      display: block;
+    }
+
+    .mobile-menu a {
+      display: block;
+      color: white;
+      padding: 0.5rem;
+      text-decoration: none;
+    }
+
+    /* ===== Hero Section ===== */
+    .hero {
+      padding: 2rem 1rem;
+      text-align: center;
+      background: #f8f9fa;
+      margin-bottom: 2rem;
+    }
+
+    /* ===== Products Grid ===== */
+    .products {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      padding: 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .product-card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem;
+      text-align: center;
+      background: white;
+      transition: transform 0.2s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-3px);
+    }
+
+    .image-placeholder {
+      height: 200px;
+      width: 100%;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+    }
+
+    /* Color Variants for Placeholders */
+    .product-card:nth-child(1) .image-placeholder { background: #FFBE0B; }
+    .product-card:nth-child(2) .image-placeholder { background: #FB5607; }
+    .product-card:nth-child(3) .image-placeholder { background: #FF006E; }
+    .product-card:nth-child(4) .image-placeholder { background: #8338EC; }
+
+    /* ===== Buttons ===== */
+    button {
+      background: #4CAF50;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+      width: 100%;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #45a049;
+    }
+
+    /* ===== Checkout Section ===== */
+    .checkout-wrapper {
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      background: #333;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    /* ===== Desktop Styles ===== */
     @media (min-width: 768px) {
       body {
-        padding-top: 120px; /* Desktop padding */
+        padding-top: 120px; /* Desktop header spacing */
       }
 
       header {
-        height: auto; /* Natural height */
-        padding: 1.5rem 1rem; /* Taller header */
+        padding: 1.5rem 1rem;
       }
 
       h1 {
         font-size: 2rem;
-        margin-bottom: 0.5rem;
+      }
+
+      .mobile-menu-icon,
+      .mobile-menu {
+        display: none;
+      }
+
+      .desktop-nav {
+        display: block;
+        text-align: center;
+        margin-top: 1rem;
+      }
+
+      .desktop-nav a {
+        color: white;
+        margin: 0 1.5rem;
+        text-decoration: none;
+        font-weight: 500;
+        transition: opacity 0.3s;
+      }
+
+      .desktop-nav a:hover {
+        opacity: 0.9;
+      }
+
+      .products {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
+
+    @media (min-width: 1024px) {
+      .products {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+      }
+      
+      .product-card {
+        padding: 1.5rem;
+      }
+    }
+</style>
