@@ -130,6 +130,45 @@
       text-align: center;
     }
 
+    /* ===== Science Section ===== */
+    .science {
+      background: #f8f9fa;
+      padding: 3rem 1rem;
+      margin: 2rem 0;
+    }
+
+    .science-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .science h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #2c3e50;
+    }
+
+    .science-point {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin: 1rem 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .science-point:hover {
+      transform: translateY(-3px);
+    }
+
+    .science-point h3 {
+      color: #4CAF50;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
     /* ===== Footer ===== */
     footer {
       background: #333;
